@@ -84,8 +84,8 @@
       <a href="${base}index.html" class="sidebar-logo">
         <img class="logo-img" src="${LOGO_URL}" alt="Fondation Lefoulon-Delalande">
         <span class="logo-text">
-          <strong>Fondation Lefoulon</strong>
-          <em>Delalande</em>
+          <strong>Fondation</strong>
+          <em>Lefoulon-Delalande</em>
         </span>
       </a>
 
@@ -178,8 +178,8 @@
       </button>
       <img class="mobile-logo" src="${LOGO_URL}" alt="Fondation Lefoulon-Delalande">
       <div class="site-name">
-        <strong>Fondation Lefoulon</strong>
-        <em>Delalande</em>
+        <strong>Fondation</strong>
+        <em>Lefoulon-Delalande</em>
       </div>
     </header>`;
 

@@ -173,16 +173,20 @@ strong { font-weight: 600; }
 .sidebar.is-open .logo-text { opacity: 1; }
 .logo-text strong {
   display: block;
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .06em;
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .14em;
   text-transform: uppercase;
-  color: #fff;
+  color: rgba(255,255,255,.55);
 }
 .logo-text em {
-  font-size: .65rem;
+  display: block;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
   font-style: normal;
-  color: rgba(255,255,255,.55);
+  color: #fff;
 }
 
 /* Nav menu */
@@ -382,13 +386,20 @@ strong { font-weight: 600; }
   line-height: 1.3;
   flex: 1;
 }
+.mobile-header .site-name strong {
+  display: block;
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  color: rgba(255,255,255,.55);
+}
 .mobile-header .site-name em {
   display: block;
-  font-size: .62rem;
+  font-size: .8rem;
   font-style: normal;
-  font-weight: 400;
-  color: rgba(255,255,255,.5);
-  letter-spacing: .03em;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .04em;
 }
 
 /* Hamburger */
