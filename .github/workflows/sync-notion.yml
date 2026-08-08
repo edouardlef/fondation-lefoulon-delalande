@@ -1,0 +1,33 @@
+name: Sync Notion
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # toutes les heures
+  workflow_dispatch:        # déclenchement manuel depuis GitHub Actions
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sync Notion → JSON
+        run: node scripts/notion-sync.mjs
+        env:
+          NOTION_TOKEN:               ${{ secrets.NOTION_TOKEN }}
+          NOTION_ACTUALITES_DB_ID:    ${{ secrets.NOTION_ACTUALITES_DB_ID }}
+          NOTION_SUGGESTIONS_DB_ID:   ${{ secrets.NOTION_SUGGESTIONS_DB_ID }}
+
+      - name: Commit si changement
+        run: |
+          git config user.name  "notion-sync[bot]"
+          git config user.email "bot@fondation-lefoulon-delalande.fr"
+          git diff --quiet || (
+            git add assets/data/actualites.json assets/data/suggestions.json &&
+            git commit -m "chore: sync Notion [$(date -u '+%Y-%m-%d %H:%M')]" &&
+            git push
+          )

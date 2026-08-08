@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" id="articleMetaDesc" content="Actualité de la Fondation Lefoulon-Delalande">
+  <title id="articleTitle">Article — Fondation Lefoulon-Delalande</title>
+  <link rel="icon" type="image/png" href="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2020/12/cropped-diapo_home-32x32.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/include.js" defer></script>
+</head>
+<body>
+<div id="sidebar-placeholder"></div>
+<div class="page-wrapper">
+  <div id="mobile-header-placeholder"></div>
+  <main id="main-content">
+
+    <!-- Hero image (rempli par JS) -->
+    <div class="article-hero-wrap" id="articleHeroWrap">
+      <div class="skeleton sk-hero"></div>
+    </div>
+
+    <!-- Breadcrumb + titre (rempli par JS) -->
+    <div class="page-header article-page-header" id="articlePageHeader">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane" id="articleBreadcrumb">
+          <a href="index.html" data-i18n="nav.home">Accueil</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <a href="actualites.html" data-i18n="nav.news">Actualités</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <span class="current" id="articleBreadTitle">…</span>
+        </nav>
+        <div class="article-header-meta" id="articleHeaderMeta">
+          <div class="skeleton sk-line sk-line--sm w-120px"></div>
+        </div>
+        <h1 id="articleH1">
+          <div class="skeleton sk-line sk-line--xl w-85"></div>
+          <div class="skeleton sk-line sk-line--xl sk-line--last w-60"></div>
+        </h1>
+      </div>
+    </div>
+
+    <!-- Corps de l'article -->
+    <div class="section">
+      <div class="container">
+        <div class="article-layout">
+
+          <!-- Contenu principal (rempli par JS) -->
+          <div class="article-body-wrap" id="articleContent">
+            <div class="skeleton sk-line w-100"></div>
+            <div class="skeleton sk-line w-100"></div>
+            <div class="skeleton sk-line w-90"></div>
+            <div class="skeleton sk-line w-100"></div>
+            <div class="skeleton sk-line sk-line--gap w-75"></div>
+            <div class="skeleton sk-line sk-line--lg w-55"></div>
+            <div class="skeleton sk-line w-100"></div>
+            <div class="skeleton sk-line sk-line--last w-95"></div>
+          </div>
+
+          <!-- Sidebar meta (rempli par JS) -->
+          <aside class="article-aside">
+            <div class="article-meta-card" id="articleMetaCard">
+              <div class="skeleton sk-line sk-line--xs w-70"></div>
+              <div class="skeleton sk-line sk-line--xs w-55"></div>
+              <div class="skeleton sk-line sk-line--xs sk-line--last w-80"></div>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- Navigation article précédent / suivant -->
+        <nav class="article-nav" id="articleNav" aria-label="Articles précédent et suivant" style="display:none;">
+          <a class="article-nav-prev" id="articleNavPrev" href="#">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            <div>
+              <span data-i18n="article.prev">Article précédent</span>
+              <strong id="articleNavPrevTitle"></strong>
+            </div>
+          </a>
+          <a class="article-nav-next" id="articleNavNext" href="#">
+            <div>
+              <span data-i18n="article.next">Article suivant</span>
+              <strong id="articleNavNextTitle"></strong>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </nav>
+
+        <!-- Actualités liées -->
+        <div class="article-related-section" id="articleRelated" style="display:none;">
+          <h2 data-i18n="article.related">À lire aussi</h2>
+          <div class="article-related-grid" id="articleRelatedGrid"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+  <div id="footer-placeholder"></div>
+</div>
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

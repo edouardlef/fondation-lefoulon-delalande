@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Toutes les actualités et événements de la Fondation Lefoulon-Delalande : Grand Prix Scientifique, Bourses de recherche, appels à candidatures.">
+  <title>Actualités & Agenda — Fondation Lefoulon-Delalande</title>
+  <link rel="icon" type="image/png" href="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2020/12/cropped-diapo_home-32x32.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/include.js" defer></script>
+  <style>
+    .filter-bar { display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px; }
+    .filter-btn { padding:8px 18px;border:1.5px solid var(--border);border-radius:var(--r);font-size:.82rem;font-weight:600;background:#fff;color:var(--text-muted);cursor:pointer;transition:all .2s; }
+    .filter-btn:hover { border-color:var(--blue);color:var(--blue); }
+    .filter-btn.active { background:var(--navy);border-color:var(--navy);color:#fff; }
+    #newsGrid { display:grid;grid-template-columns:repeat(3,1fr);gap:24px; }
+    @media(max-width:900px){ #newsGrid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:600px){ #newsGrid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<div id="sidebar-placeholder"></div>
+<div class="page-wrapper">
+  <div id="mobile-header-placeholder"></div>
+  <main id="main-content">
+
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html" data-i18n="nav.home">Accueil</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <span class="current" data-i18n="nav.news">Actualités</span>
+        </nav>
+        <h1 data-i18n="news_page.page_title">Actualités & Agenda</h1>
+        <p data-i18n="news_page.page_desc">Découvrez toutes les actualités et évènements de la Fondation Lefoulon-Delalande.</p>
+      </div>
+    </div>
+
+    <!-- Contenu -->
+    <div class="section">
+      <div class="container">
+
+        <!-- Filtres -->
+        <div class="filter-bar" id="newsFilter" role="group" aria-label="Filtrer les actualités">
+          <button class="filter-btn active" data-cat="all" data-i18n="news_page.all">Toutes</button>
+          <button class="filter-btn" data-cat="prix" data-i18n="news_page.cat_prix">Grand Prix</button>
+          <button class="filter-btn" data-cat="bourse" data-i18n="news_page.cat_bourse">Bourses</button>
+          <button class="filter-btn" data-cat="appel" data-i18n="news_page.cat_appel">Appel à candidatures</button>
+          <button class="filter-btn" data-cat="event" data-i18n="news_page.cat_event">Événement</button>
+        </div>
+
+        <!-- Grille des actualités (remplie par main.js) -->
+        <div id="newsGrid" aria-live="polite" aria-label="Actualités">
+          <!-- Skeletons de chargement -->
+          <div class="news-card"><div class="news-card-img skeleton sk-thumb"></div><div class="news-card-body"><div class="skeleton sk-line sk-line--xs w-60"></div><div class="skeleton sk-line sk-line--lg w-85"></div><div class="skeleton sk-line sk-line--sm sk-line--last w-100"></div></div></div>
+          <div class="news-card"><div class="news-card-img skeleton sk-thumb"></div><div class="news-card-body"><div class="skeleton sk-line sk-line--xs w-60"></div><div class="skeleton sk-line sk-line--lg w-85"></div><div class="skeleton sk-line sk-line--sm sk-line--last w-100"></div></div></div>
+          <div class="news-card"><div class="news-card-img skeleton sk-thumb"></div><div class="news-card-body"><div class="skeleton sk-line sk-line--xs w-60"></div><div class="skeleton sk-line sk-line--lg w-85"></div><div class="skeleton sk-line sk-line--sm sk-line--last w-100"></div></div></div>
+          <div class="news-card"><div class="news-card-img skeleton sk-thumb"></div><div class="news-card-body"><div class="skeleton sk-line sk-line--xs w-60"></div><div class="skeleton sk-line sk-line--lg w-85"></div><div class="skeleton sk-line sk-line--sm sk-line--last w-100"></div></div></div>
+          <div class="news-card"><div class="news-card-img skeleton sk-thumb"></div><div class="news-card-body"><div class="skeleton sk-line sk-line--xs w-60"></div><div class="skeleton sk-line sk-line--lg w-85"></div><div class="skeleton sk-line sk-line--sm sk-line--last w-100"></div></div></div>
+          <div class="news-card"><div class="news-card-img skeleton sk-thumb"></div><div class="news-card-body"><div class="skeleton sk-line sk-line--xs w-60"></div><div class="skeleton sk-line sk-line--lg w-85"></div><div class="skeleton sk-line sk-line--sm sk-line--last w-100"></div></div></div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+  <div id="footer-placeholder"></div>
+</div>
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

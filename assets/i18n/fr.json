@@ -1,0 +1,189 @@
+{
+  "lang": "fr",
+  "dir": "ltr",
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "mission": "Notre mission",
+    "history": "Histoire",
+    "governance": "Gouvernance",
+    "grand_prix": "Grand Prix Scientifique",
+    "grants": "Bourses de recherche",
+    "news": "Actualités",
+    "suggestions": "Ce qui pourrait vous intéresser",
+    "contact": "Informations pratiques",
+    "solutions": "Lefoulon Solutions →",
+    "language": "Langue"
+  },
+  "hero": {
+    "label": "Fondation Lefoulon-Delalande",
+    "title": "Au service de la <em>recherche médicale</em> cardio-vasculaire",
+    "desc": "Créée en 2000, la Fondation Lefoulon-Delalande soutient chaque année les scientifiques qui font avancer la médecine cardiovasculaire par ses Prix et ses Bourses de recherche.",
+    "cta_prize": "Grand Prix Scientifique",
+    "cta_grants": "Bourses de recherche",
+    "scroll": "Découvrir"
+  },
+  "stats": {
+    "founded": "Fondée en",
+    "founded_val": "2000",
+    "prize_since": "Grand Prix depuis",
+    "prize_since_val": "2002",
+    "grants_since": "Bourses depuis",
+    "grants_since_val": "2001",
+    "prize_amount": "Montant du Prix",
+    "prize_amount_val": "600 000 €"
+  },
+  "intro": {
+    "label": "Notre vocation",
+    "title": "Contribuer à la recherche cardiovasculaire",
+    "p1": "La Fondation Lefoulon-Delalande a pour objet de contribuer, par l'apport de concours financiers, à la recherche médicale dans le domaine cardio-vasculaire, au sens le plus large, intégrant : physiologie, biologie, médecine, épidémiologie, pharmacologie, différenciation cellulaire, malformations congénitales.",
+    "p2": "Chaque année, elle décerne un Grand Prix Scientifique à une personnalité de renom et des bourses à de jeunes chercheurs post-doctorants français travaillant à plein temps sur des sujets cardiovasculaires.",
+    "cta": "En savoir plus"
+  },
+  "programs": {
+    "label": "Nos programmes",
+    "title": "Récompenser l'excellence scientifique",
+    "grand_prix": {
+      "badge": "Grand Prix",
+      "title": "Grand Prix Scientifique",
+      "desc": "Décerné chaque année depuis 2002 à une personnalité scientifique internationale ayant apporté une contribution majeure en physiologie, biologie ou médecine cardio-vasculaire.",
+      "amount": "600 000",
+      "amount_label": "€ / an",
+      "created": "Créé en 2002",
+      "cta": "Découvrir le Grand Prix"
+    },
+    "grants": {
+      "badge": "Bourses",
+      "title": "Bourses de recherche",
+      "desc": "Attribuées chaque année depuis 2001 à de jeunes chercheurs post-doctorants travaillant à plein temps dans une structure de recherche française sur des sujets cardiovasculaires.",
+      "amount": "Appel à candidatures",
+      "amount_label": "annuel",
+      "created": "Créées en 2001",
+      "cta": "Découvrir les Bourses"
+    }
+  },
+  "news": {
+    "label": "Actualités",
+    "title": "Les dernières nouvelles",
+    "cta_all": "Voir toutes les actualités",
+    "read_more": "Lire la suite →",
+    "no_news": "Aucune actualité disponible."
+  },
+  "suggestions": {
+    "label": "Pour aller plus loin",
+    "title": "Ce qui pourrait vous intéresser",
+    "desc": "Découvrez les ressources et organismes partenaires de la Fondation Lefoulon-Delalande dans le domaine de la recherche cardiovasculaire."
+  },
+  "cta": {
+    "title": "Vous souhaitez candidater ?",
+    "desc": "Consultez nos appels à candidatures en cours pour le Grand Prix Scientifique et les Bourses de recherche.",
+    "btn_contact": "Nous contacter",
+    "btn_news": "Voir les appels en cours"
+  },
+  "about": {
+    "page_title": "À propos",
+    "page_desc": "Découvrez l'histoire et la mission de la Fondation Lefoulon-Delalande, fondée en 2000 en hommage à Michel Delalande.",
+    "mission_title": "Notre mission",
+    "history_title": "L'histoire de la fondation",
+    "governance_title": "Gouvernance",
+    "history_subtitle": "Michel Delalande",
+    "history_desc": "La Fondation Lefoulon-Delalande a été créée en décembre 2000 dans le but d'honorer la mémoire de Monsieur Michel Delalande, Président Fondateur du groupe pharmaceutique Delalande.",
+    "scientific_council": "Conseil scientifique",
+    "jury": "Jury des bourses",
+    "edito_title": "Édito",
+    "xavier_darcos": "Xavier Darcos, Chancelier de l'Institut de France"
+  },
+  "grand_prix": {
+    "page_title": "Grand Prix Scientifique",
+    "page_desc": "Créé en 2002, le Grand Prix est décerné chaque année à une personnalité scientifique ayant apporté une contribution majeure en médecine cardiovasculaire.",
+    "intro_title": "Un prix d'excellence",
+    "intro_desc": "Le montant du Grand Prix Lefoulon-Delalande est de 600 000 €. Il récompense une personnalité scientifique ayant apporté une contribution scientifique importante en physiologie, biologie ou médecine cardio-vasculaire.",
+    "laureates_title": "Nos lauréats",
+    "council_title": "Conseil scientifique",
+    "apply_title": "Appel à candidatures",
+    "apply_desc": "Le Grand Prix est ouvert aux nominations internationales. Téléchargez le règlement et déposez votre candidature.",
+    "download_rules": "Télécharger le règlement",
+    "nominate": "Soumettre une candidature"
+  },
+  "grants": {
+    "page_title": "Bourses de recherche",
+    "page_desc": "Créées en 2001, les Bourses de recherche soutiennent chaque année de jeunes chercheurs post-doctorants travaillant dans une structure de recherche française.",
+    "intro_title": "Promouvoir la recherche française",
+    "jury_title": "Jury des bourses",
+    "laureates_title": "Historique des lauréats",
+    "conditions_title": "Conditions de candidature",
+    "apply_title": "Déposer une candidature",
+    "conditions": [
+      "Être titulaire d'un doctorat en médecine, sciences, pharmacie ou vétérinaire",
+      "Travailler à plein temps dans une structure de recherche française",
+      "Mener des recherches dans le domaine cardio-vasculaire",
+      "Les stages de recherche à l'étranger ne sont pas recevables"
+    ]
+  },
+  "news_page": {
+    "page_title": "Actualités & Agenda",
+    "page_desc": "Découvrez toutes les actualités et évènements de la Fondation Lefoulon-Delalande.",
+    "all": "Toutes",
+    "cat_prix": "Grand Prix",
+    "cat_bourse": "Bourses",
+    "cat_appel": "Appel à candidatures",
+    "cat_event": "Événement"
+  },
+  "contact": {
+    "page_title": "Informations pratiques",
+    "page_desc": "Retrouvez ici toutes les coordonnées de la Fondation Lefoulon-Delalande.",
+    "address_title": "Adresse",
+    "address": "Institut de France\n23 quai de Conti\n75006 Paris",
+    "contact_form": "Formulaire de contact",
+    "form_name": "Nom",
+    "form_firstname": "Prénom",
+    "form_email": "Courriel",
+    "form_phone": "Téléphone",
+    "form_subject": "Objet de votre demande",
+    "form_subject_prize": "Grand Prix",
+    "form_subject_grants": "Bourses de recherche",
+    "form_subject_other": "Autre",
+    "form_message": "Message",
+    "form_attachment": "Ajouter une pièce jointe",
+    "form_submit": "Envoyer le message",
+    "form_required": "Champ requis",
+    "form_success": "Votre message a été envoyé avec succès. Nous vous répondrons dans les meilleurs délais."
+  },
+  "legal": {
+    "page_title": "Mentions légales",
+    "page_desc": "Informations légales relatives au site web de la Fondation Lefoulon-Delalande.",
+    "publisher": "Éditeur",
+    "director": "Directeur de publication",
+    "hosting": "Hébergeur",
+    "design": "Conception graphique"
+  },
+  "privacy": {
+    "page_title": "Politique de confidentialité",
+    "page_desc": "Politique de confidentialité et gestion des données personnelles."
+  },
+  "solutions": {
+    "title": "Lefoulon Solutions",
+    "desc": "Vous allez être redirigé vers le site Lefoulon Solutions.",
+    "redirect": "Accéder au site",
+    "auto": "Redirection automatique dans"
+  },
+  "footer": {
+    "tagline": "Fondée en 2000 sous l'égide de l'Institut de France, la Fondation Lefoulon-Delalande soutient la recherche médicale cardiovasculaire.",
+    "nav_title": "Navigation",
+    "legal_title": "Informations",
+    "social_title": "Suivez-nous",
+    "partners_title": "Sous l'égide de",
+    "copyright": "© 2024 Fondation Lefoulon-Delalande. Tous droits réservés.",
+    "legal_link": "Mentions légales",
+    "privacy_link": "Politique de confidentialité",
+    "contact_link": "Contact"
+  },
+  "article": {
+    "about": "À propos de cet article",
+    "related": "À lire aussi",
+    "prev": "Article précédent",
+    "next": "Article suivant",
+    "back_to_news": "Toutes les actualités",
+    "read_official": "Lire sur le site officiel"
+  }
+}

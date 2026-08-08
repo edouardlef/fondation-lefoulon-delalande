@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coordonnées de la Fondation Lefoulon-Delalande — Institut de France, 23 quai de Conti, 75006 Paris. Formulaire de contact pour toute demande.">
+  <title>Informations pratiques — Fondation Lefoulon-Delalande</title>
+  <link rel="icon" type="image/png" href="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2020/12/cropped-diapo_home-32x32.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/include.js" defer></script>
+  <style>
+    .map-embed { border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);margin-top:24px; }
+    .map-embed iframe { width:100%;height:260px;border:none;display:block; }
+    /* Encart liens rapides */
+    .quick-links { background:var(--bg-section);border-radius:var(--r-lg);padding:24px;margin-top:24px; }
+    .quick-links h4 { font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;font-weight:700; }
+    .quick-links ul { display:flex;flex-direction:column;gap:10px; }
+    .quick-links a { font-size:.875rem;color:var(--navy);font-weight:500; }
+    .quick-links a:hover { color:var(--blue); }
+    .quick-links a.external { color:var(--blue); }
+  </style>
+</head>
+<body>
+<div id="sidebar-placeholder"></div>
+<div class="page-wrapper">
+  <div id="mobile-header-placeholder"></div>
+  <main id="main-content">
+
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html" data-i18n="nav.home">Accueil</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <span class="current" data-i18n="nav.contact">Informations pratiques</span>
+        </nav>
+        <h1 data-i18n="contact.page_title">Informations pratiques</h1>
+        <p data-i18n="contact.page_desc">Retrouvez ici toutes les coordonnées de la Fondation Lefoulon-Delalande.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="split-layout">
+
+          <!-- Formulaire de contact -->
+          <div>
+            <span class="section-label" data-i18n="contact.contact_form">Formulaire de contact</span>
+            <h2 class="title-line" data-i18n="contact.contact_form">Formulaire de contact</h2>
+
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="nom" data-i18n="contact.form_name">Nom <span class="required">*</span></label>
+                  <input type="text" id="nom" name="nom" required autocomplete="family-name" data-i18n-placeholder="contact.form_name">
+                </div>
+                <div class="form-field">
+                  <label for="prenom" data-i18n="contact.form_firstname">Prénom <span class="required">*</span></label>
+                  <input type="text" id="prenom" name="prenom" required autocomplete="given-name" data-i18n-placeholder="contact.form_firstname">
+                </div>
+                <div class="form-field">
+                  <label for="email">Email <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" required autocomplete="email" placeholder="votre@email.com">
+                </div>
+                <div class="form-field">
+                  <label for="telephone" data-i18n="contact.form_phone">Téléphone</label>
+                  <input type="tel" id="telephone" name="telephone" autocomplete="tel" data-i18n-placeholder="contact.form_phone">
+                </div>
+                <div class="form-field full">
+                  <label for="objet" data-i18n="contact.form_subject">Objet de votre demande <span class="required">*</span></label>
+                  <select id="objet" name="objet" required>
+                    <option value="">— Choisissez votre demande —</option>
+                    <option value="grand-prix" data-i18n="contact.form_subject_prize">Grand Prix</option>
+                    <option value="bourses" data-i18n="contact.form_subject_grants">Bourses de recherche</option>
+                    <option value="autre" data-i18n="contact.form_subject_other">Autre</option>
+                  </select>
+                </div>
+                <div class="form-field full">
+                  <label for="message" data-i18n="contact.form_message">Message <span class="required">*</span></label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-field full">
+                  <label for="fichier" data-i18n="contact.form_attachment">Ajouter une pièce jointe</label>
+                  <input type="file" id="fichier" name="fichier" accept=".pdf,.doc,.docx,.jpg,.png">
+                  <small class="form-hint">PDF, DOC, JPG ou PNG (max. 10 Mo)</small>
+                </div>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary btn-lg" data-i18n="contact.form_submit">Envoyer le message</button>
+                <p class="form-note">
+                  <span data-i18n="contact.form_required">Champ requis</span> *
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Coordonnées -->
+          <aside>
+            <div class="info-card">
+              <h3 class="info-card-title" data-i18n="contact.address_title">Adresse</h3>
+              <div class="info-row">
+                <div class="info-row-icon">
+                  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="info-row-content">
+                  <strong>Fondation Lefoulon-Delalande</strong>
+                  <span>
+                    Institut de France<br>
+                    23 quai de Conti<br>
+                    75006 Paris<br>
+                    France
+                  </span>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-row-icon">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <div class="info-row-content">
+                  <strong>Site</strong>
+                  <span><a href="https://www.fondation-lefoulon-delalande.fr" target="_blank" rel="noopener">fondation-lefoulon-delalande.fr</a></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carte -->
+            <div class="map-embed">
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=2.3353%2C48.8556%2C2.3413%2C48.8586&layer=mapnik&marker=48.85724%2C2.33832"
+                title="Localisation — Institut de France, 23 quai de Conti, Paris"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <p class="small-note">
+              <a href="https://maps.google.com/?q=Institut+de+France,+23+quai+de+Conti,+75006+Paris" target="_blank" rel="noopener">Ouvrir dans Google Maps →</a>
+            </p>
+
+            <!-- Liens rapides -->
+            <div class="quick-links">
+              <h4>Liens rapides</h4>
+              <ul>
+                <li><a href="grand-prix-scientifique.html">Grand Prix Scientifique →</a></li>
+                <li><a href="bourses-de-recherche.html">Bourses de recherche →</a></li>
+                <li><a href="actualites.html">Actualités →</a></li>
+                <li><a class="external" href="https://www.institut-de-france.fr" target="_blank" rel="noopener">Institut de France →</a></li>
+              </ul>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <div id="footer-placeholder"></div>
+</div>
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

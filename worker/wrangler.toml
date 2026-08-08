@@ -1,0 +1,30 @@
+name = "fondation-worker"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+
+# ── Dev local ────────────────────────────────────────────────────────────────
+[vars]
+FRONT_URL = "http://localhost:5173"
+
+# KV pour le cache des données Notion (créer le namespace puis remplacer l'id)
+# wrangler kv namespace create fondation-kv
+[[kv_namespaces]]
+binding = "KV"
+id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+preview_id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# ── Production ───────────────────────────────────────────────────────────────
+# Secrets à ajouter via le dashboard Cloudflare (Workers > fondation-worker >
+# Settings > Variables and Secrets) OU via `wrangler secret put <NOM>` :
+#   NOTION_TOKEN, NOTION_ACTUALITES_DB_ID, NOTION_SUGGESTIONS_DB_ID
+[env.production]
+name = "fondation-worker"
+
+[env.production.vars]
+FRONT_URL = "https://www.fondation-lefoulon-delalande.fr"
+
+# KV à activer une fois le namespace créé dans le dashboard Cloudflare
+# (Workers & Pages > KV > Create namespace "fondation-kv")
+# [[env.production.kv_namespaces]]
+# binding = "KV"
+# id = "REMPLACER_PAR_VRAI_ID"

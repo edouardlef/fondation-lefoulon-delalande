@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Créé en 2002, le Grand Prix Scientifique Lefoulon-Delalande (600 000 €) récompense chaque année une personnalité scientifique en médecine cardiovasculaire.">
+  <title>Grand Prix Scientifique — Fondation Lefoulon-Delalande</title>
+  <link rel="icon" type="image/png" href="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2020/12/cropped-diapo_home-32x32.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/include.js" defer></script>
+  <style>
+    /* Bandeau montant du prix */
+    .prize-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-hover) 100%);padding:48px 40px;max-width:var(--max-content);margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;position:relative;overflow:hidden; }
+    .prize-hero::after { content:'';position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.2) 0%,transparent 70%); }
+    .prize-hero .section-label { color:var(--gold); }
+    .prize-hero h2 { color:#fff;margin:12px 0 20px; }
+    .prize-hero p { color:rgba(255,255,255,.75);max-width:540px; }
+    .prize-amount-big { text-align:right;position:relative;z-index:1;flex-shrink:0; }
+    .prize-amount-big .num { font-family:var(--font-heading);font-size:4rem;font-weight:700;color:var(--gold);line-height:1;display:block; }
+    .prize-amount-big .label { font-size:.85rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.08em; }
+    .prize-desc { max-width:760px;margin-bottom:48px; }
+    /* Cartes lauréats */
+    .laureate-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:20px;margin:28px 0; }
+    .laureate-card { text-align:center;background:#fff;border-radius:var(--r-lg);padding:20px 16px;box-shadow:var(--shadow-xs);border:1px solid var(--border-light);transition:transform .2s,box-shadow .2s; }
+    .laureate-card:hover { transform:translateY(-2px);box-shadow:var(--shadow-sm); }
+    .laureate-card .team-avatar { width:80px;height:80px;margin-bottom:10px; }
+    .laureate-year { font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:8px; }
+    .laureate-name { font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:4px;line-height:1.3; }
+    .laureate-role { font-size:.72rem;color:var(--text-muted);line-height:1.4; }
+    .laureate-more { margin-top:6px; }
+    .laureate-more a { font-size:.75rem; }
+    @media(max-width:768px){ .prize-hero{grid-template-columns:1fr;padding:40px 20px;} .prize-amount-big{text-align:left;} }
+  </style>
+</head>
+<body>
+<div id="sidebar-placeholder"></div>
+<div class="page-wrapper">
+  <div id="mobile-header-placeholder"></div>
+  <main id="main-content">
+
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html" data-i18n="nav.home">Accueil</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <span class="current" data-i18n="nav.grand_prix">Grand Prix Scientifique</span>
+        </nav>
+        <h1 data-i18n="grand_prix.page_title">Grand Prix Scientifique</h1>
+        <p data-i18n="grand_prix.page_desc">Créé en 2002, le Grand Prix est décerné chaque année à une personnalité scientifique ayant apporté une contribution majeure en médecine cardiovasculaire.</p>
+      </div>
+    </div>
+
+    <!-- Image cérémonie -->
+    <div class="media-banner">
+      <img
+        src="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2025/04/Grand-Prix-3-768x417.png"
+        alt="Cérémonie du Grand Prix Scientifique Lefoulon-Delalande"
+        loading="lazy"
+      >
+    </div>
+
+    <!-- Bloc montant -->
+    <div class="stats-bar">
+      <div class="prize-hero">
+        <div>
+          <span class="section-label">Depuis 2002</span>
+          <h2 data-i18n="grand_prix.intro_title">Un prix d'excellence</h2>
+          <p data-i18n="grand_prix.intro_desc">Le montant du Grand Prix Lefoulon-Delalande est de 600 000 €. Il récompense une personnalité scientifique ayant apporté une contribution importante en physiologie, biologie ou médecine cardio-vasculaire.</p>
+        </div>
+        <div class="prize-amount-big">
+          <span class="num">600 000 €</span>
+          <span class="label">par an</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="section">
+      <div class="container">
+
+        <!-- Description -->
+        <div class="prize-desc slide-up">
+          <p>Créé en 2002, le Grand Prix est décerné chaque année à une personnalité scientifique ayant apporté une contribution scientifique importante en physiologie, biologie ou médecine cardio-vasculaire. Cette dénomination, prise au sens le plus large, inclut génétique, épidémiologie, physiologie, clinique, imagerie, thérapeutique, pharmacologie, et le développement du système cardio-vasculaire.</p>
+          <p>Le jury du Grand Prix est composé des membres du Conseil scientifique de la Fondation, personnalités françaises et internationales de premier rang dans le domaine cardiovasculaire.</p>
+        </div>
+
+        <!-- Appel à candidatures -->
+        <div class="apply-section apply-section--split">
+          <div>
+            <span class="section-label" data-i18n="grand_prix.apply_title">Appel à candidatures</span>
+            <h3 data-i18n="grand_prix.apply_title">Grand Prix 2026 — Appel à candidatures</h3>
+            <p class="apply-desc" data-i18n="grand_prix.apply_desc">Le Grand Prix est ouvert aux nominations internationales. Téléchargez le règlement et déposez votre candidature.</p>
+          </div>
+          <div class="apply-actions">
+            <a href="informations-pratiques.html" class="btn btn-primary" data-i18n="grand_prix.nominate">Soumettre une candidature</a>
+            <a href="https://www.fondation-lefoulon-delalande.fr/grand-prix-scientifique" class="btn btn-outline" target="_blank" rel="noopener" data-i18n="grand_prix.download_rules">Télécharger le règlement</a>
+          </div>
+        </div>
+
+        <!-- Lauréats -->
+        <section aria-labelledby="laureates-title">
+          <h2 id="laureates-title" class="title-line section-title" data-i18n="grand_prix.laureates_title">Nos lauréats</h2>
+
+          <div class="laureate-grid">
+            <div class="laureate-card">
+              <div class="laureate-year">2026</div>
+              <img class="team-avatar" src="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2026/05/Capture-decran-2026-05-07-a-18.05.43-342x256.png" alt="Daniel Drucker & Jens Juul Holst" loading="lazy">
+              <div class="laureate-name">Daniel Drucker & Jens Juul Holst</div>
+              <div class="laureate-role">Canada · Danemark — Recherche sur le GLP-1</div>
+              <div class="laureate-role laureate-more"><a href="https://www.fondation-lefoulon-delalande.fr/actualites/laureat-du-grand-prix-scientifique-2026/" target="_blank" rel="noopener">Lire →</a></div>
+            </div>
+            <div class="laureate-card">
+              <div class="laureate-year">2025</div>
+              <img class="team-avatar" src="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2025/07/09.-Gilles-Montalescot-300x232.png" alt="Gilles Montalescot" loading="lazy">
+              <div class="laureate-name">Prof. Gilles Montalescot</div>
+              <div class="laureate-role">AP-HP · Pitié-Salpêtrière — Thrombose coronaire</div>
+              <div class="laureate-role laureate-more"><a href="https://www.fondation-lefoulon-delalande.fr/actualites/laureat-du-grand-prix-scientifique-2025/" target="_blank" rel="noopener">Lire →</a></div>
+            </div>
+            <div class="laureate-card">
+              <div class="laureate-year">2024</div>
+              <img class="team-avatar" src="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2021/07/Capture-decran-2024-05-14-140645-342x256.png" alt="Kathryn Moore & Christopher Glass" loading="lazy">
+              <div class="laureate-name">Kathryn Moore & Christopher Glass</div>
+              <div class="laureate-role">NYU · UCSD — Immunologie cardiovasculaire</div>
+              <div class="laureate-role laureate-more"><a href="https://www.fondation-lefoulon-delalande.fr/actualites/les-grands-prix-de-lefoulon-delalande-2024/" target="_blank" rel="noopener">Lire →</a></div>
+            </div>
+            <div class="laureate-card">
+              <div class="laureate-year">2023</div>
+              <img class="team-avatar" src="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2023/05/Quaggin_headshot_work-342x256.jpg" alt="Susan Quaggin" loading="lazy">
+              <div class="laureate-name">Prof. Susan Quaggin</div>
+              <div class="laureate-role">Université Northwestern, Chicago — Développement vasculaire</div>
+              <div class="laureate-role laureate-more"><a href="https://www.fondation-lefoulon-delalande.fr/actualites/decouvrez-les-laureats-du-grand-prix-scientifique-2023-de-la-fondation-lefoulon-delalande/" target="_blank" rel="noopener">Lire →</a></div>
+            </div>
+            <div class="laureate-card">
+              <div class="laureate-year">2013</div>
+              <img class="team-avatar" src="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2022/03/2013-Margaret-Buckingham-biologiste-du-developpement-©-CNRS-Phototheque-_-Cyril-FRESILLON-150x150.jpg" alt="Margaret Buckingham" loading="lazy">
+              <div class="laureate-name">Prof. Margaret Buckingham</div>
+              <div class="laureate-role">Institut Pasteur — Biologie du développement</div>
+            </div>
+            <div class="laureate-card">
+              <div class="laureate-year">2008</div>
+              <img class="team-avatar" src="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2022/03/800px-Dr._Mona_Nemer_at_University_of_Ottawa_-_2008_2579997958_cropped-150x150.jpg" alt="Mona Nemer" loading="lazy">
+              <div class="laureate-name">Prof. Mona Nemer</div>
+              <div class="laureate-role">Université d'Ottawa · Conseillère scientifique en chef du Canada</div>
+            </div>
+          </div>
+
+          <p class="link-more">
+            <a href="https://www.fondation-lefoulon-delalande.fr/grand-prix-scientifique" target="_blank" rel="noopener">Consulter la liste complète des lauréats →</a>
+          </p>
+        </section>
+
+        <!-- Conseil scientifique -->
+        <section class="mt-64" aria-labelledby="council-title">
+          <h2 id="council-title" class="title-line section-title" data-i18n="grand_prix.council_title">Composition du conseil scientifique</h2>
+          <p class="section-lead">Le Conseil scientifique est présidé par le Professeur Margaret Buckingham et comprend des personnalités scientifiques françaises et internationales de premier rang.</p>
+
+          <div class="card-grid-2">
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Kali Alitalo</div>
+              <div class="team-role">Université de Lille, ancien président de la Société Européenne de Cardiologie</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Michel Bertrand</div>
+              <div class="team-role">Université de Lille, ancien président de la Société Européenne de Cardiologie</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Catherine Boileau</div>
+              <div class="team-role">Hôpital Bichat, directrice de l'unité INSERM 1148 (Paris)</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Margaret Buckingham</div>
+              <div class="team-role">Académie des sciences · Institut Pasteur · Présidente du Conseil</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Alain Carpentier</div>
+              <div class="team-role">Académie des sciences · Président honoraire du Conseil</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Jean-Claude Daubert</div>
+              <div class="team-role">Université de Rennes 1, ancien président de la SFC</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Anne Eichmann</div>
+              <div class="team-role">Université de Yale (USA) · PARCC, Hôpital Européen Georges Pompidou</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Giovanni de Gaetano</div>
+              <div class="team-role">IRCCS Institut Neurologique Méditerranéen NEUROMED (Italie)</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Michel Lazdunski</div>
+              <div class="team-role">Académie des sciences · Université Côte d'Azur</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Mona Nemer</div>
+              <div class="team-role">Université d'Ottawa · Conseillère scientifique en chef du Canada</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Denis Noble</div>
+              <div class="team-role">Université d'Oxford · Royal Society</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. David D. Sabatini</div>
+              <div class="team-role">Académie des sciences (associé) · Université de New York</div>
+            </div>
+            <div class="info-card info-card--sm">
+              <div class="team-name">Prof. Hugh Watkins</div>
+              <div class="team-role">Université d'Oxford · British Heart Foundation</div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <div class="container">
+        <h2 data-i18n="cta.title">Vous souhaitez candidater ?</h2>
+        <p data-i18n="cta.desc">Consultez nos appels à candidatures en cours pour le Grand Prix Scientifique et les Bourses de recherche.</p>
+        <div class="cta-btns">
+          <a href="informations-pratiques.html" class="btn btn-gold" data-i18n="cta.btn_contact">Nous contacter</a>
+          <a href="actualites.html" class="btn btn-outline-white" data-i18n="cta.btn_news">Voir les appels en cours</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <div id="footer-placeholder"></div>
+</div>
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

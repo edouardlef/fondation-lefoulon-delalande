@@ -1,0 +1,70 @@
+{
+  "suggestions": [
+    {
+      "id": "institut-de-france",
+      "titre_fr": "Institut de France",
+      "titre_en": "Institut de France",
+      "desc_fr": "Decouvrez l'institution sous l'egide de laquelle la Fondation est placee, qui regroupe les cinq academies francaises.",
+      "desc_en": "Discover the institution under whose aegis the Foundation operates, encompassing the five French academies.",
+      "icon": "building",
+      "lien": "https://www.institut-de-france.fr",
+      "lien_label_fr": "Visiter le site",
+      "lien_label_en": "Visit website"
+    },
+    {
+      "id": "academie-des-sciences",
+      "titre_fr": "Academie des sciences",
+      "titre_en": "Academie des sciences",
+      "desc_fr": "Partenaire historique de la Fondation, l'Academie des sciences soutient et valorise la recherche scientifique francaise.",
+      "desc_en": "Historical partner of the Foundation, the Academie des sciences supports and promotes French scientific research.",
+      "icon": "award",
+      "lien": "https://www.academie-sciences.fr",
+      "lien_label_fr": "En savoir plus",
+      "lien_label_en": "Learn more"
+    },
+    {
+      "id": "inserm",
+      "titre_fr": "INSERM",
+      "titre_en": "INSERM",
+      "desc_fr": "L'Institut national de la sante et de la recherche medicale, premier organisme europeen dedie a la recherche biologique et medicale.",
+      "desc_en": "The national institute for health and medical research, Europe's leading organisation dedicated to biological and medical research.",
+      "icon": "flask",
+      "lien": "https://www.inserm.fr",
+      "lien_label_fr": "Visiter l'INSERM",
+      "lien_label_en": "Visit INSERM"
+    },
+    {
+      "id": "societe-francaise-de-cardiologie",
+      "titre_fr": "Societe Francaise de Cardiologie",
+      "titre_en": "French Society of Cardiology",
+      "desc_fr": "La societe savante de reference pour les cardiologues francais, partenaire de la Fondation dans la promotion de la recherche cardiovasculaire.",
+      "desc_en": "The leading learned society for French cardiologists, partner of the Foundation in promoting cardiovascular research.",
+      "icon": "heart",
+      "lien": "https://www.sfcardio.fr",
+      "lien_label_fr": "Voir la SFC",
+      "lien_label_en": "See the SFC"
+    },
+    {
+      "id": "recherche-cardiovasculaire-en-france",
+      "titre_fr": "Recherche cardiovasculaire en France",
+      "titre_en": "Cardiovascular research in France",
+      "desc_fr": "Panorama de la recherche cardiovasculaire en France : laboratoires, equipes, publications et grands projets en cours.",
+      "desc_en": "Overview of cardiovascular research in France: laboratories, teams, publications and major ongoing projects.",
+      "icon": "activity",
+      "lien": "https://www.inserm.fr/dossier/maladies-cardiovasculaires/",
+      "lien_label_fr": "Explorer",
+      "lien_label_en": "Explore"
+    },
+    {
+      "id": "lefoulon-solutions",
+      "titre_fr": "Lefoulon Solutions",
+      "titre_en": "Lefoulon Solutions",
+      "desc_fr": "Decouvrez Lefoulon Solutions, entreprise specialisee dans le developpement de solutions informatiques innovantes pour les organisations.",
+      "desc_en": "Discover Lefoulon Solutions, a company specialising in the development of innovative IT solutions for organisations.",
+      "icon": "search",
+      "lien": "https://www.lefoulonsolutions.com/",
+      "lien_label_fr": "Visiter le site",
+      "lien_label_en": "Visit website"
+    }
+  ]
+}

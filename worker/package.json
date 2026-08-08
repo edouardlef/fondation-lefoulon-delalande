@@ -1,0 +1,12 @@
+{
+  "name": "fondation-worker",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "deploy": "wrangler deploy --env production"
+  },
+  "devDependencies": {
+    "wrangler": "^3.99.0"
+  }
+}

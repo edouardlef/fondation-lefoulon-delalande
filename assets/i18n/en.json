@@ -1,0 +1,189 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "mission": "Our mission",
+    "history": "History",
+    "governance": "Governance",
+    "grand_prix": "Scientific Grand Prize",
+    "grants": "Research Grants",
+    "news": "News",
+    "suggestions": "You might also like",
+    "contact": "Contact us",
+    "solutions": "Lefoulon Solutions →",
+    "language": "Language"
+  },
+  "hero": {
+    "label": "Fondation Lefoulon-Delalande",
+    "title": "Supporting <em>cardiovascular</em> medical research",
+    "desc": "Founded in 2000, the Fondation Lefoulon-Delalande supports scientists who advance cardiovascular medicine through its Scientific Prize and Research Grants.",
+    "cta_prize": "Scientific Grand Prize",
+    "cta_grants": "Research Grants",
+    "scroll": "Discover"
+  },
+  "stats": {
+    "founded": "Founded in",
+    "founded_val": "2000",
+    "prize_since": "Grand Prize since",
+    "prize_since_val": "2002",
+    "grants_since": "Grants since",
+    "grants_since_val": "2001",
+    "prize_amount": "Prize amount",
+    "prize_amount_val": "€600,000"
+  },
+  "intro": {
+    "label": "Our vocation",
+    "title": "Contributing to cardiovascular research",
+    "p1": "The Fondation Lefoulon-Delalande aims to contribute, through financial support, to medical research in the cardiovascular field in the broadest sense, including: physiology, biology, medicine, epidemiology, pharmacology, cell differentiation, congenital malformations.",
+    "p2": "Each year, it awards a Scientific Grand Prize to a renowned international scientist and grants to young French post-doctoral researchers working full-time on cardiovascular topics.",
+    "cta": "Learn more"
+  },
+  "programs": {
+    "label": "Our programs",
+    "title": "Rewarding scientific excellence",
+    "grand_prix": {
+      "badge": "Grand Prize",
+      "title": "Scientific Grand Prize",
+      "desc": "Awarded annually since 2002 to an international scientist who has made a major contribution to cardiovascular physiology, biology or medicine.",
+      "amount": "600,000",
+      "amount_label": "€ / year",
+      "created": "Created in 2002",
+      "cta": "Discover the Grand Prize"
+    },
+    "grants": {
+      "badge": "Grants",
+      "title": "Research Grants",
+      "desc": "Awarded annually since 2001 to young post-doctoral researchers working full-time in a French research institution on cardiovascular topics.",
+      "amount": "Call for applications",
+      "amount_label": "annual",
+      "created": "Created in 2001",
+      "cta": "Discover the Grants"
+    }
+  },
+  "news": {
+    "label": "News",
+    "title": "Latest news",
+    "cta_all": "View all news",
+    "read_more": "Read more →",
+    "no_news": "No news available."
+  },
+  "suggestions": {
+    "label": "Go further",
+    "title": "You might also be interested in",
+    "desc": "Discover the resources and partner organizations of the Fondation Lefoulon-Delalande in the field of cardiovascular research."
+  },
+  "cta": {
+    "title": "Would you like to apply?",
+    "desc": "Check our current calls for applications for the Scientific Grand Prize and Research Grants.",
+    "btn_contact": "Contact us",
+    "btn_news": "View current calls"
+  },
+  "about": {
+    "page_title": "About",
+    "page_desc": "Discover the history and mission of the Fondation Lefoulon-Delalande, founded in 2000 in tribute to Michel Delalande.",
+    "mission_title": "Our mission",
+    "history_title": "Foundation history",
+    "governance_title": "Governance",
+    "history_subtitle": "Michel Delalande",
+    "history_desc": "The Fondation Lefoulon-Delalande was created in December 2000 to honour the memory of Mr Michel Delalande, Founder and President of the Delalande pharmaceutical group.",
+    "scientific_council": "Scientific Council",
+    "jury": "Grants jury",
+    "edito_title": "Editorial",
+    "xavier_darcos": "Xavier Darcos, Chancellor of the Institut de France"
+  },
+  "grand_prix": {
+    "page_title": "Scientific Grand Prize",
+    "page_desc": "Created in 2002, the Grand Prize is awarded annually to a scientist who has made a major contribution to cardiovascular medicine.",
+    "intro_title": "A prize for excellence",
+    "intro_desc": "The Lefoulon-Delalande Grand Prize is worth €600,000. It rewards a scientist who has made a significant contribution to cardiovascular physiology, biology or medicine.",
+    "laureates_title": "Our laureates",
+    "council_title": "Scientific Council",
+    "apply_title": "Call for nominations",
+    "apply_desc": "The Grand Prize is open to international nominations. Download the rules and submit your nomination.",
+    "download_rules": "Download the rules",
+    "nominate": "Submit a nomination"
+  },
+  "grants": {
+    "page_title": "Research Grants",
+    "page_desc": "Created in 2001, the Research Grants support young post-doctoral researchers working in a French research institution.",
+    "intro_title": "Supporting French research",
+    "jury_title": "Grants jury",
+    "laureates_title": "Laureates history",
+    "conditions_title": "Application requirements",
+    "apply_title": "Apply now",
+    "conditions": [
+      "Hold a PhD in medicine, science, pharmacy or veterinary science",
+      "Work full-time in a French research institution",
+      "Conduct research in the cardiovascular field",
+      "Research internships abroad are not eligible"
+    ]
+  },
+  "news_page": {
+    "page_title": "News & Events",
+    "page_desc": "Discover all the news and events of the Fondation Lefoulon-Delalande.",
+    "all": "All",
+    "cat_prix": "Grand Prize",
+    "cat_bourse": "Grants",
+    "cat_appel": "Call for applications",
+    "cat_event": "Event"
+  },
+  "contact": {
+    "page_title": "Contact",
+    "page_desc": "Find all the contact details for the Fondation Lefoulon-Delalande here.",
+    "address_title": "Address",
+    "address": "Institut de France\n23 quai de Conti\n75006 Paris",
+    "contact_form": "Contact form",
+    "form_name": "Last name",
+    "form_firstname": "First name",
+    "form_email": "Email",
+    "form_phone": "Phone",
+    "form_subject": "Subject",
+    "form_subject_prize": "Grand Prize",
+    "form_subject_grants": "Research Grants",
+    "form_subject_other": "Other",
+    "form_message": "Message",
+    "form_attachment": "Add an attachment",
+    "form_submit": "Send message",
+    "form_required": "Required field",
+    "form_success": "Your message has been sent successfully. We will get back to you as soon as possible."
+  },
+  "legal": {
+    "page_title": "Legal notices",
+    "page_desc": "Legal information relating to the website of the Fondation Lefoulon-Delalande.",
+    "publisher": "Publisher",
+    "director": "Publication director",
+    "hosting": "Hosting provider",
+    "design": "Graphic design"
+  },
+  "privacy": {
+    "page_title": "Privacy policy",
+    "page_desc": "Privacy policy and personal data management."
+  },
+  "solutions": {
+    "title": "Lefoulon Solutions",
+    "desc": "You will be redirected to the Lefoulon Solutions website.",
+    "redirect": "Go to the website",
+    "auto": "Automatic redirect in"
+  },
+  "footer": {
+    "tagline": "Founded in 2000 under the aegis of the Institut de France, the Fondation Lefoulon-Delalande supports cardiovascular medical research.",
+    "nav_title": "Navigation",
+    "legal_title": "Information",
+    "social_title": "Follow us",
+    "partners_title": "Under the aegis of",
+    "copyright": "© 2024 Fondation Lefoulon-Delalande. All rights reserved.",
+    "legal_link": "Legal notices",
+    "privacy_link": "Privacy policy",
+    "contact_link": "Contact"
+  },
+  "article": {
+    "about": "About this article",
+    "related": "Read also",
+    "prev": "Previous article",
+    "next": "Next article",
+    "back_to_news": "All news",
+    "read_official": "Read on the official website"
+  }
+}

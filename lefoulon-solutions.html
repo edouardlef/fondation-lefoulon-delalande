@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="5;url=https://www.lefoulonsolutions.com/">
+  <meta name="description" content="Redirection vers Lefoulon Solutions.">
+  <title>Lefoulon Solutions — Fondation Lefoulon-Delalande</title>
+  <link rel="icon" type="image/png" href="https://www.fondation-lefoulon-delalande.fr/wp-content/uploads/2020/12/cropped-diapo_home-32x32.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/include.js" defer></script>
+  <style>
+    .redirect-page {
+      min-height:60vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:60px 20px;
+    }
+    .redirect-card {
+      max-width:520px;
+      width:100%;
+      text-align:center;
+      background:#fff;
+      border-radius:var(--r-xl);
+      padding:56px 48px;
+      box-shadow:var(--shadow-lg);
+      border:1px solid var(--border-light);
+    }
+    .redirect-icon {
+      width:64px;height:64px;
+      background:var(--gold-light);
+      border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      margin:0 auto 24px;
+      color:var(--gold-dark);
+    }
+    .redirect-icon svg { width:32px;height:32px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round; }
+    .redirect-card h2 { font-size:1.8rem;margin-bottom:12px; }
+    .redirect-card .redirect-desc { color:var(--text-muted);margin-bottom:0; }
+    .redirect-card .redirect-note { font-size:.82rem;color:var(--text-muted);margin-bottom:28px; }
+    .countdown-ring {
+      width:72px;height:72px;
+      margin:24px auto;
+      position:relative;
+    }
+    .countdown-ring svg { width:100%;height:100%; }
+    .countdown-ring .track { fill:none;stroke:var(--border);stroke-width:4; }
+    .countdown-ring .progress { fill:none;stroke:var(--gold);stroke-width:4;stroke-linecap:round;stroke-dasharray:188.5;stroke-dashoffset:0;transform-origin:center;transform:rotate(-90deg);transition:stroke-dashoffset 1s linear; }
+    .countdown-num { position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:1.8rem;font-weight:700;color:var(--navy); }
+  </style>
+</head>
+<body>
+<div id="sidebar-placeholder"></div>
+<div class="page-wrapper">
+  <div id="mobile-header-placeholder"></div>
+  <main id="main-content">
+
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html" data-i18n="nav.home">Accueil</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <span class="current" data-i18n="nav.solutions">Lefoulon Solutions</span>
+        </nav>
+        <h1 data-i18n="solutions.title">Lefoulon Solutions</h1>
+      </div>
+    </div>
+
+    <div class="redirect-page">
+      <div class="redirect-card">
+        <div class="redirect-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </div>
+
+        <h2 data-i18n="solutions.title">Lefoulon Solutions</h2>
+        <p class="redirect-desc" data-i18n="solutions.desc">Vous allez être redirigé vers le site Lefoulon Solutions.</p>
+
+        <!-- Countdown visuel -->
+        <div class="countdown-ring" aria-hidden="true">
+          <svg viewBox="0 0 60 60">
+            <circle class="track"    cx="30" cy="30" r="26"/>
+            <circle class="progress" cx="30" cy="30" r="26" id="progressRing"/>
+          </svg>
+          <div class="countdown-num">
+            <span id="redirectTimer" data-target="https://www.lefoulonsolutions.com/" data-seconds="5">5</span>
+          </div>
+        </div>
+
+        <p class="redirect-note">
+          <span data-i18n="solutions.auto">Redirection automatique dans</span>
+          <strong> <span id="redirectTimer2">5</span> secondes</strong>
+        </p>
+
+        <a href="https://www.lefoulonsolutions.com/" class="btn btn-gold btn-lg" data-i18n="solutions.redirect">
+          Accéder au site
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <p class="mt-20">
+          <a href="index.html" class="btn btn-outline btn-sm" data-i18n="nav.home">← Retour à l'accueil</a>
+        </p>
+      </div>
+    </div>
+
+  </main>
+  <div id="footer-placeholder"></div>
+</div>
+
+<script type="module" src="assets/js/main.js"></script>
+<script>
+  // Animation countdown ring
+  (function(){
+    let count = 5;
+    const ring = document.getElementById('progressRing');
+    const t1   = document.getElementById('redirectTimer');
+    const t2   = document.getElementById('redirectTimer2');
+    const circumference = 2 * Math.PI * 26; // ≈ 163.4
+    if(!ring) return;
+    ring.style.strokeDasharray = circumference;
+    ring.style.strokeDashoffset = 0;
+
+    const interval = setInterval(() => {
+      count--;
+      if(t1) t1.textContent = count;
+      if(t2) t2.textContent = count;
+      const offset = circumference * (1 - count / 5);
+      ring.style.strokeDashoffset = offset;
+      if(count <= 0){
+        clearInterval(interval);
+        window.location.href = 'https://www.lefoulonsolutions.com/';
+      }
+    }, 1000);
+  })();
+</script>
+</body>
+</html>
