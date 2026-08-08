@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev --local",
-    "deploy": "wrangler deploy --env production"
+    "deploy": "wrangler deploy"
   },
   "devDependencies": {
     "wrangler": "^3.99.0"

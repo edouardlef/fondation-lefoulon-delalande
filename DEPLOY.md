@@ -40,7 +40,7 @@ Lien : **https://dash.cloudflare.com** → menu **Workers & Pages** → **Create
 
 Réglages de build :
 - **Root directory** : `worker`
-- **Deploy command** : `npx wrangler deploy --env production`
+- **Deploy command** : `npx wrangler deploy`
 - **Build command** : *(laisser vide)*
 
 ### b. Créer le namespace KV (cache des données Notion)
@@ -73,10 +73,10 @@ Dashboard → **Workers & Pages → `fondation-worker` → Settings → Variable
 cd worker
 npm install
 npx wrangler login                       # une seule fois
-npx wrangler secret put NOTION_TOKEN --env production
-npx wrangler secret put NOTION_ACTUALITES_DB_ID --env production
-npx wrangler secret put NOTION_SUGGESTIONS_DB_ID --env production
-npx wrangler deploy --env production
+npx wrangler secret put NOTION_TOKEN
+npx wrangler secret put NOTION_ACTUALITES_DB_ID
+npx wrangler secret put NOTION_SUGGESTIONS_DB_ID
+npx wrangler deploy
 ```
 
 ### e. Vérifier
