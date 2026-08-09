@@ -63,6 +63,14 @@ Dashboard → **Workers & Pages → `fondation-worker` → Settings → Variable
 | `NOTION_ACTUALITES_DB_ID` | **Secret** | `38976f30-…-d3c7` | idem |
 | `NOTION_SUGGESTIONS_DB_ID` | **Secret** | `38976f30-…-ce57` | idem |
 | `FRONT_URL` | Variable | `https://www.fondation-lefoulon-delalande.fr` | déjà dans `wrangler.toml` (rien à faire) |
+| `RESEND_API_KEY` | **Secret** | ta clé Resend | **formulaire de contact** (sans elle, l'envoi est simulé) |
+| `MAIL_TO` | **Secret** | email de réception des demandes | idem |
+| `RESEND_FROM` | **Secret** (opt.) | `Fondation Lefoulon-Delalande <onboarding@resend.dev>` | expéditeur |
+
+> **Formulaire de contact** : la route `/api/contact` envoie un email via Resend. Tant que
+> `RESEND_API_KEY` et `MAIL_TO` ne sont pas définis, l'envoi est simulé (loggé, succès renvoyé).
+> Côté front, le formulaire n'appelle le Worker que si `API_BASE` est renseigné dans
+> `assets/js/include.js` ; sinon il simule aussi l'envoi.
 
 > Les 3 `NOTION_*` sont à ajouter en **Secret** (pas en variable en clair).
 > Alternative CLI : `cd worker && npx wrangler secret put NOTION_TOKEN --env production` (idem pour les 2 autres).

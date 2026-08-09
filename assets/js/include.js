@@ -20,6 +20,8 @@
   const API_BASE = '';
   window.FLD_DATA = (kind) =>
     API_BASE ? `${API_BASE}/api/${kind}` : `${base}assets/data/${kind}.json`;
+  // Base du Worker pour les actions (formulaire de contact). Vide → envoi simulé.
+  window.FLD_API = API_BASE;
 
   const PAGES = [
     { key: 'home',      href: 'index.html',                       icon: 'home',     i18n: 'nav.home',      sub: [] },
@@ -148,18 +150,8 @@
           </div>
         </div>
 
-        <div class="footer-partners">
-          <h4 data-i18n="footer.partners_title">Sous l'égide de</h4>
-          <div class="partners-row">
-            <a href="https://www.institut-de-france.fr" class="partner-link" target="_blank" rel="noopener">Institut de France</a>
-            <a href="https://www.academie-sciences.fr" class="partner-link" target="_blank" rel="noopener">Académie des sciences</a>
-            <a href="https://www.inserm.fr" class="partner-link" target="_blank" rel="noopener">INSERM</a>
-            <a href="https://www.sfcardio.fr" class="partner-link" target="_blank" rel="noopener">SFC</a>
-          </div>
-        </div>
-
         <div class="footer-bottom">
-          <span class="footer-copy" data-i18n="footer.copyright">© 2024 Fondation Lefoulon-Delalande. Tous droits réservés.</span>
+          <span class="footer-copy">© <span id="footer-year">2024</span> <span data-i18n="footer.copyright">Fondation Lefoulon-Delalande. Tous droits réservés.</span></span>
           <nav class="footer-legal" aria-label="Liens légaux">
             <a href="${base}mentions-legales.html" data-i18n="footer.legal_link">Mentions légales</a>
             <a href="${base}politique-confidentialite.html" data-i18n="footer.privacy_link">Politique de confidentialité</a>
@@ -196,6 +188,10 @@
     // Footer
     const footerEl = document.getElementById('footer-placeholder');
     if (footerEl) footerEl.outerHTML = footerHTML;
+
+    // Année courante dans le copyright
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
   if (document.readyState === 'loading') {

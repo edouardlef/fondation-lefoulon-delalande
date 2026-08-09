@@ -24,13 +24,22 @@ function corsHeaders(env, request) {
     origin.startsWith("http://localhost");
   return {
     "Access-Control-Allow-Origin": isAllowed ? origin : allowed,
-    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
   };
 }
 
 function json(data, status = 200, extraHeaders = {}) {
   return Response.json(data, { status, headers: extraHeaders });
+}
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function escapeHtml(str) {
+  if (typeof str !== "string") return "";
+  return str
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
 }
 
 // ─── Notion API ────────────────────────────────────────────────────────────────
@@ -303,6 +312,73 @@ async function serveCached(env, cors, cacheKey, builder) {
   }
 }
 
+// ─── POST /api/contact ──────────────────────────────────────────────────────────
+async function handleContact(request, env, cors) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return json({ error: "Corps JSON invalide." }, 400, cors);
+  }
+
+  const nom = (body.nom || "").trim();
+  const prenom = (body.prenom || "").trim();
+  const email = (body.email || "").trim();
+  const telephone = (body.telephone || "").trim();
+  const objet = (body.objet || "").trim();
+  const message = (body.message || "").trim();
+
+  if (!nom || !email || !message)
+    return json({ error: "Nom, email et message requis." }, 400, cors);
+  if (nom.length > 100 || prenom.length > 100)
+    return json({ error: "Nom invalide." }, 400, cors);
+  if (!EMAIL_REGEX.test(email) || email.length > 254)
+    return json({ error: "Adresse email invalide." }, 400, cors);
+  if (message.length > 5000)
+    return json({ error: "Message trop long." }, 400, cors);
+
+  const html =
+    `<h2>Nouvelle demande — Fondation Lefoulon-Delalande</h2>` +
+    `<table style="border-collapse:collapse">` +
+    `<tr><td style="padding:6px;font-weight:bold">Nom</td><td style="padding:6px">${escapeHtml(prenom)} ${escapeHtml(nom)}</td></tr>` +
+    `<tr><td style="padding:6px;font-weight:bold">Email</td><td style="padding:6px">${escapeHtml(email)}</td></tr>` +
+    (telephone ? `<tr><td style="padding:6px;font-weight:bold">Téléphone</td><td style="padding:6px">${escapeHtml(telephone)}</td></tr>` : "") +
+    (objet ? `<tr><td style="padding:6px;font-weight:bold">Objet</td><td style="padding:6px">${escapeHtml(objet)}</td></tr>` : "") +
+    `<tr><td style="padding:6px;font-weight:bold">Message</td><td style="padding:6px">${escapeHtml(message)}</td></tr>` +
+    `</table>`;
+
+  // Sans clé Resend (ex. dev) → on logue et on renvoie succès
+  if (!env.RESEND_API_KEY || !env.MAIL_TO) {
+    console.log("[DEV] Contact simulé :", { nom, prenom, email, telephone, objet });
+    return json({ success: true, dev: true }, 200, cors);
+  }
+
+  try {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      },
+      body: JSON.stringify({
+        from: env.RESEND_FROM || "Fondation Lefoulon-Delalande <onboarding@resend.dev>",
+        to: [env.MAIL_TO],
+        reply_to: email,
+        subject: `Contact — ${prenom} ${nom}${objet ? " · " + objet : ""}`,
+        html,
+      }),
+    });
+    if (!res.ok) {
+      console.error("Resend error:", res.status, await res.text());
+      return json({ error: "Erreur lors de l'envoi." }, 502, cors);
+    }
+    return json({ success: true }, 200, cors);
+  } catch (err) {
+    console.error("Contact error:", err.message);
+    return json({ error: "Erreur interne." }, 500, cors);
+  }
+}
+
 // ─── Main ───────────────────────────────────────────────────────────────────────
 export default {
   async fetch(request, env) {
@@ -323,6 +399,10 @@ export default {
 
     if (url.pathname === "/api/suggestions" && request.method === "GET") {
       return serveCached(env, cors, "suggestions:data", buildSuggestions);
+    }
+
+    if (url.pathname === "/api/contact" && request.method === "POST") {
+      return handleContact(request, env, cors);
     }
 
     return new Response("Not found", { status: 404, headers: cors });

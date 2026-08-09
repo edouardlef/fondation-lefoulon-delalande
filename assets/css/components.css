@@ -699,6 +699,29 @@
   color: var(--text-muted);
   margin-top: 12px;
 }
+.form-error {
+  margin-top: 12px;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--red);
+}
+
+/* Message de succès (remplace le formulaire après envoi) */
+.form-success {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--r-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+.form-success svg { color: var(--blue); stroke: currentColor; }
+.form-success p { color: var(--text); font-size: 1rem; margin: 0; max-width: 420px; }
 
 /* ── Appel à candidatures ───────────────────────────────────── */
 .apply-section {

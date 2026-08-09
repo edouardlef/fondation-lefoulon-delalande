@@ -73,7 +73,7 @@
                 <div class="form-field full">
                   <label for="objet" data-i18n="contact.form_subject">Objet de votre demande <span class="required">*</span></label>
                   <select id="objet" name="objet" required>
-                    <option value="">— Choisissez votre demande —</option>
+                    <option value="" data-i18n="contact.form_subject_placeholder">— Choisissez votre demande —</option>
                     <option value="grand-prix" data-i18n="contact.form_subject_prize">Grand Prix</option>
                     <option value="bourses" data-i18n="contact.form_subject_grants">Bourses de recherche</option>
                     <option value="autre" data-i18n="contact.form_subject_other">Autre</option>
@@ -86,7 +86,7 @@
                 <div class="form-field full">
                   <label for="fichier" data-i18n="contact.form_attachment">Ajouter une pièce jointe</label>
                   <input type="file" id="fichier" name="fichier" accept=".pdf,.doc,.docx,.jpg,.png">
-                  <small class="form-hint">PDF, DOC, JPG ou PNG (max. 10 Mo)</small>
+                  <small class="form-hint" data-i18n="contact.form_attachment_hint">PDF, DOC, JPG ou PNG (max. 10 Mo)</small>
                 </div>
               </div>
 
@@ -122,7 +122,7 @@
                   <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                 </div>
                 <div class="info-row-content">
-                  <strong>Site</strong>
+                  <strong data-i18n="contact.site_label">Site</strong>
                   <span><a href="https://www.fondation-lefoulon-delalande.fr" target="_blank" rel="noopener">fondation-lefoulon-delalande.fr</a></span>
                 </div>
               </div>
@@ -137,16 +137,16 @@
               ></iframe>
             </div>
             <p class="small-note">
-              <a href="https://maps.google.com/?q=Institut+de+France,+23+quai+de+Conti,+75006+Paris" target="_blank" rel="noopener">Ouvrir dans Google Maps →</a>
+              <a href="https://maps.google.com/?q=Institut+de+France,+23+quai+de+Conti,+75006+Paris" target="_blank" rel="noopener" data-i18n="contact.open_maps">Ouvrir dans Google Maps →</a>
             </p>
 
             <!-- Liens rapides -->
             <div class="quick-links">
-              <h4>Liens rapides</h4>
+              <h4 data-i18n="contact.quick_links">Liens rapides</h4>
               <ul>
-                <li><a href="grand-prix-scientifique.html">Grand Prix Scientifique →</a></li>
-                <li><a href="bourses-de-recherche.html">Bourses de recherche →</a></li>
-                <li><a href="actualites.html">Actualités →</a></li>
+                <li><a href="grand-prix-scientifique.html" data-i18n="contact.ql_prize">Grand Prix Scientifique →</a></li>
+                <li><a href="bourses-de-recherche.html" data-i18n="contact.ql_grants">Bourses de recherche →</a></li>
+                <li><a href="actualites.html" data-i18n="contact.ql_news">Actualités →</a></li>
                 <li><a class="external" href="https://www.institut-de-france.fr" target="_blank" rel="noopener">Institut de France →</a></li>
               </ul>
             </div>

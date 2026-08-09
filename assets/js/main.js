@@ -248,12 +248,49 @@ function initContactForm() {
     btn.disabled = true;
     btn.textContent = '…';
 
-    // Simulation d'envoi (à remplacer par un vrai backend/formspree)
-    await new Promise(r => setTimeout(r, 1200));
-    showFormSuccess(form);
-    btn.disabled = false;
-    btn.textContent = original;
+    const payload = {
+      nom:       form.nom?.value.trim()       || '',
+      prenom:    form.prenom?.value.trim()    || '',
+      email:     form.email?.value.trim()     || '',
+      telephone: form.telephone?.value.trim() || '',
+      objet:     form.objet?.value            || '',
+      message:   form.message?.value.trim()   || '',
+    };
+
+    try {
+      const api = window.FLD_API;
+      if (api) {
+        const r = await fetch(`${api}/api/contact`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      } else {
+        // Worker non configuré (API_BASE vide) → envoi simulé
+        await new Promise(res => setTimeout(res, 800));
+        console.warn('[contact] window.FLD_API non défini : envoi simulé.');
+      }
+      showFormSuccess(form);
+    } catch (err) {
+      console.error('[contact]', err);
+      showFormError(form);
+      btn.disabled = false;
+      btn.textContent = original;
+    }
   });
+}
+
+function showFormError(form) {
+  let box = form.querySelector('.form-error');
+  if (!box) {
+    box = document.createElement('p');
+    box.className = 'form-error';
+    box.setAttribute('role', 'alert');
+    form.querySelector('.form-submit')?.appendChild(box);
+  }
+  box.textContent = I18n.t('contact.form_error')
+    || "Une erreur est survenue. Merci de réessayer ou de nous écrire directement.";
 }
 
 function showFormSuccess(form) {
@@ -331,7 +368,7 @@ function renderArticle(item, lang) {
     headerMeta.innerHTML = `
       <span class="news-category ${catClass}">${catText}</span>
       <time class="news-date">${date}</time>
-      ${item.auteur ? `<span class="article-author">par ${item.auteur}</span>` : ''}`;
+      ${item.auteur ? `<span class="article-author">${I18n.t('article.by')} ${item.auteur}</span>` : ''}`;
   }
 
   // Contenu principal
