@@ -9,13 +9,28 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - name: Vérifier la présence des secrets
+        id: guard
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: |
+          if [ -z "${NOTION_TOKEN}" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Secrets Notion absents → sync ignoré (aucune erreur)."
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.guard.outputs.run == 'true'
 
       - uses: actions/setup-node@v4
+        if: steps.guard.outputs.run == 'true'
         with:
           node-version: '20'
 
       - name: Sync Notion → JSON
+        if: steps.guard.outputs.run == 'true'
         run: node scripts/notion-sync.mjs
         env:
           NOTION_TOKEN:               ${{ secrets.NOTION_TOKEN }}
@@ -23,6 +38,7 @@ jobs:
           NOTION_SUGGESTIONS_DB_ID:   ${{ secrets.NOTION_SUGGESTIONS_DB_ID }}
 
       - name: Commit si changement
+        if: steps.guard.outputs.run == 'true'
         run: |
           git config user.name  "notion-sync[bot]"
           git config user.email "bot@fondation-lefoulon-delalande.fr"
