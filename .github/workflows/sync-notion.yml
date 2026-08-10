@@ -1,9 +1,11 @@
 name: Sync Notion
 
 on:
-  schedule:
-    - cron: '0 * * * *'   # toutes les heures
-  workflow_dispatch:        # déclenchement manuel depuis GitHub Actions
+  # Synchro automatique DÉSACTIVÉE (token Notion à renouveler).
+  # Pour réactiver : décommenter le bloc schedule ci-dessous.
+  # schedule:
+  #   - cron: '0 * * * *'   # toutes les heures
+  workflow_dispatch:        # lancement manuel uniquement (onglet Actions)
 
 jobs:
   sync:
